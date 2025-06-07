@@ -16,22 +16,26 @@
       background-color: #1a237e;
       color: white;
       padding: 20px;
-      text-align: center;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
     }
 
     .login-btn {
-      position: absolute;
-      left: 20px;
-      top: 20px;
       background-color: white;
       color: #1a237e;
       border: none;
       padding: 8px 16px;
       border-radius: 4px;
       font-weight: bold;
-      cursor: pointer;
       text-decoration: none;
+      cursor: pointer;
     }
 
     .login-btn:hover {
@@ -40,13 +44,18 @@
 
     main {
       padding: 20px;
-      max-width: 800px;
+      max-width: 1200px;
       margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
 
     .article {
       background: white;
-      margin-bottom: 20px;
       padding: 15px;
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -64,28 +73,22 @@
 
     .adsense {
       background: #eee;
-      height: 250px;
-      width: 300px;
-      margin: 30px auto;
+      height: 90px;
+      width: 728px;
+      margin: 40px auto;
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
       border: 1px dashed #aaa;
+      border-radius: 6px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .adsense {
         width: 100%;
         height: auto;
         padding: 20px;
-      }
-
-      .login-btn {
-        left: 10px;
-        top: 10px;
-        padding: 6px 12px;
-        font-size: 14px;
       }
     }
   </style>
@@ -93,18 +96,20 @@
 <body>
 
   <header>
+    <div class="logo">🌍 Geopolitical</div>
     <a href="login.html" class="login-btn">Login</a>
-    <h1>Geopolitical</h1>
   </header>
 
-  <main id="articles"></main>
+  <main>
+    <div class="grid" id="articles"></div>
 
-  <!-- Google AdSense Placeholder -->
-  <div class="adsense">
-    <!-- Replace with your Google AdSense script -->
-    <strong>AdSense 300×250 Ad</strong><br>
-    (Your ad will appear here)
-  </div>
+    <!-- Google AdSense Placeholder -->
+    <div class="adsense">
+      <!-- Replace with your real Google AdSense script -->
+      <strong>AdSense 728×90 Banner Ad</strong><br>
+      (Your ad will appear here)
+    </div>
+  </main>
 
   <script>
     const topics = [
@@ -134,4 +139,5 @@
 
 </body>
 </html>
+
 
