@@ -17,6 +17,25 @@
       color: white;
       padding: 20px;
       text-align: center;
+      position: relative;
+    }
+
+    .login-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background-color: white;
+      color: #1a237e;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .login-btn:hover {
+      background-color: #e8eaf6;
     }
 
     main {
@@ -61,12 +80,20 @@
         height: auto;
         padding: 20px;
       }
+
+      .login-btn {
+        left: 10px;
+        top: 10px;
+        padding: 6px 12px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
+    <a href="login.html" class="login-btn">Login</a>
     <h1>Geopolitical</h1>
   </header>
 
