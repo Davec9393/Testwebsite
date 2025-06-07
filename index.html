@@ -2,105 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Geopolitical Articles</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #007BFF; /* Blue background */
-      color: white;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
     }
 
     header {
-      background-color: #0056b3;
+      background-color: #1a237e;
+      color: white;
       padding: 20px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .login-form input {
-      padding: 8px;
-      margin-right: 10px;
-      border: none;
-      border-radius: 4px;
-    }
-
-    .login-form button {
-      padding: 8px 12px;
-      background-color: white;
-      color: #0056b3;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      text-align: center;
     }
 
     main {
-      display: flex;
       padding: 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
-    .left-side,
-    .right-side {
-      padding: 10px;
-    }
-
-    .left-side {
-      width: 40%;
-    }
-
-    .right-side {
-      width: 60%;
-    }
-
-    .image-container img {
-      width: 100%;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-
-    .news-post {
-      background-color: rgba(255, 255, 255, 0.1);
+    .article {
+      background: white;
+      margin-bottom: 20px;
       padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .news-post h3 {
+    .article h2 {
       margin-top: 0;
+      color: #333;
+    }
+
+    .article p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .adsense {
+      background: #eee;
+      height: 250px;
+      width: 300px;
+      margin: 30px auto;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px dashed #aaa;
+    }
+
+    @media (max-width: 600px) {
+      .adsense {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <form class="login-form">
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
+    <h1>Geopolitical</h1>
   </header>
 
-  <main>
-    <div class="left-side">
-      <div class="image-container">
-        <img src="https://via.placeholder.com/300x200" alt="Image 1" />
-        <img src="https://via.placeholder.com/300x200" alt="Image 2" />
-      </div>
-    </div>
+  <main id="articles"></main>
 
-    <div class="right-side">
-      <div class="news-post">
-        <h3>News Title 1</h3>
-        <p>This is the first news post. It contains a brief summary of the news article.</p>
-      </div>
-      <div class="news-post">
-        <h3>News Title 2</h3>
-        <p>This is the second news post with more updates and information.</p>
-      </div>
-    </div>
-  </main>
+  <!-- Google AdSense Placeholder -->
+  <div class="adsense">
+    <!-- Replace with your Google AdSense script -->
+    <strong>AdSense 300×250 Ad</strong><br>
+    (Your ad will appear here)
+  </div>
+
+  <script>
+    const topics = [
+      "Ukraine Conflict Analysis",
+      "China–Taiwan Relations",
+      "Middle East Tensions",
+      "US–Russia Diplomatic Shifts",
+      "Global Oil Market Power Plays"
+    ];
+
+    function generateArticle(topic) {
+      return `
+        <div class="article">
+          <h2>${topic}</h2>
+          <p>
+            This is a placeholder article about <strong>${topic}</strong>. 
+            In the full version, this content would be generated using your AI-powered generator. 
+            It can cover current events, analysis, and historical context related to geopolitical dynamics.
+          </p>
+        </div>
+      `;
+    }
+
+    const container = document.getElementById("articles");
+    container.innerHTML = topics.map(generateArticle).join('');
+  </script>
 
 </body>
 </html>
+
